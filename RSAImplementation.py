@@ -1,32 +1,43 @@
-def PrimalityTesting(x, expo, n):
+def PrimalityTesting(a, x):
 
-    binary = format(expo, 'b')
-    e = binary[1:]
-    y = x
+    binary = format(a, 'b')
 
+    e = binary[:-1]
+    e += "0"
+
+
+
+    print(e)
+    #e = binary[1:]
+
+    #y = x
+    y = 1
+
+
+    print(e)
     for i in range(len(e)):
 
         #Added this
-        z =  y
+        z = y
 
-        y = (y * y) % n
+        y = (y * y) % a
 
         #Here
-        if  1 ^ z != 1 ^ z != (n-1):
-            print(n, "is not prime!")
+        if y == 1 ^ z and y != 1 ^ z and y != (a-1):
+            print(a, "is not prime!")
             break
 
         if e[i] == '1':
-            y = (y * x) % n
+            y = (y * x) % a
 
     if y != 1:
-        print(n, "is not prime.")
+        print(a, "is not prime.")
     else:
-        print(n, "is perhaps prime!")
+        print(a, "is perhaps prime!")
 
     return y
 
 
 
 
-print('TADA! This the answer', PrimalityTesting(23, 43, 36))
+print('TADA! This the answer', PrimalityTesting(27, 2))
