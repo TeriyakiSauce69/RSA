@@ -31,23 +31,22 @@ def getRandomPrime():
 
 
 
-
-
-
+#Primality Test. Seems to kinda work. Could use some work. Taken from class slides.
 def PrimalityTesting(a, x):
+    print("Testing with",x,".")
 
     binary = format(a, 'b')
 
     e = binary[:-1]
     e += "0"
 
-    print(e)
+    #print(e)
     #e = binary[1:]
 
     #y = x
     y = 1
 
-    print(e)
+    #print(e)
     for i in range(len(e)):
 
         #Added this
@@ -67,16 +66,18 @@ def PrimalityTesting(a, x):
         print(a, "is not prime.")
     else:
         print(a, "is perhaps prime!")
-
+    #print(y)
     return y
 
 import math, time, random
 
 
-#Euclid Algorithm to find GCD of two Inputs
+#Euclid Algorithm to find GCD of two Inputs, and get Multplicative Inverse. I didn't understand the implementation from
+#Slides well. I implemented what I found on the bottom of this site, http://www-math.ucdenver.edu/~wcherowi/courses/m5410/exeucalg.html.
+#Seems to get the job done.
 def Euclid(x,y):
-    print('i',"\t",'q',"\t", 'm',"\t", 'n',"\t", 'r',"\t", 't')
-    print('-------------------------------------------------------------')
+    #print('i',"\t",'q',"\t", 'm',"\t", 'n',"\t", 'r',"\t", 't')
+    #print('-------------------------------------------------------------')
 
     t, lastt = 0, 1
     #print("t, lastt" , t, lastt)
@@ -115,36 +116,67 @@ def Euclid(x,y):
         y = r
     #print(t, lastt, list[i-3],still_x)
 
-    print("This is the multplicative inverse, ti , we care about! ", (t - (lastt * list[i - 2])) % still_x)
+    #print("This is the multplicative inverse, ti , we care about! ", (t - (lastt * list[i - 2])) % still_x)
     multplicative_inverse = (t - (lastt * list[i - 2])) % still_x
-    print(multplicative_inverse)
+    #print(multplicative_inverse)
 
-    #print(0-3)
-    #print("This should be 25",-1 % 26)
 
-    # for z in list:
-    #     print(z)
-    # print("DIS", list[5 - 3])
-
-    print('STOP, the GCD between these two integers is:', x)
+    #print('STOP, the GCD between these two integers is:', x)
     return x, multplicative_inverse
 
 def main():
-    #x = getRandomPrime()
-    #print("\n")
-    #y = getRandomPrime()
+    #Get two random numbers that may be prime, x and y.
 
-    #print("\n")
-    # print('TADA! This the answer', PrimalityTesting(x, 2))
-    #PrimalityTesting(x, 2)
-    #print("\n")
+    while True:
+        p = getRandomPrime()
+        print("\n")
+
+        twenty_as = []
+        while True:
+            d = random.randrange(1, p)
+            if d not in twenty_as:
+                twenty_as.append(d)
+            if len(twenty_as) == 20:
+                break
+        for a in twenty_as:
+            PrimalityTesting(p, a)
+        break
+
+    print("\n")
+
+    while True:
+        q = getRandomPrime()
+        print("\n")
+
+        twenty_as2 = []
+        while True:
+            z = random.randrange(1, q)
+            if z not in twenty_as2:
+                twenty_as2.append(z)
+            if len(twenty_as2) == 20:
+                break
+        for k in twenty_as2:
+            PrimalityTesting(q, k)
+        break
+
+
+    print("\n")
+
+    n = 0
+    if p != q:
+        n = p * q
+    else:
+        print("P and Q are equal. Stop and rerun this please!")
 
     #Euclid(37,29)
     for e in range(3,2000):
-        x, multplicative_inverse = Euclid(e,9504)
+        x, multplicative_inverse = Euclid(e,n)
         if x == 1:
-            print(e, "and", 9504, "are relatively prime. The Multiplicative inverse is:", multplicative_inverse )
+            print(e, "and", n, "are relatively prime. The Multiplicative inverse is:", multplicative_inverse )
+            print("\n")
+            print("p = ", p, "q = ", q, "n = ", n, "e = ", x, "d = ", multplicative_inverse)
             break
+
 
 if __name__ == "__main__":
     main()

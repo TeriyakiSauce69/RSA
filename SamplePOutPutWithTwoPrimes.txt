@@ -1,0 +1,109 @@
+Random Binary Number: 1100010 LSB 0
+Random Binary Number: 10000 LSB 0
+Random Binary Number: 101011 LSB 1
+Random Binary Number: 110 LSB 0
+Random Binary Number: 1110 LSB 0
+Final prime in 32 bit format: 00000000000000000000000001001001
+In integer form: 73
+
+
+Testing with 39 .
+73 is perhaps prime!
+Testing with 11 .
+73 is perhaps prime!
+Testing with 3 .
+73 is perhaps prime!
+Testing with 33 .
+73 is perhaps prime!
+Testing with 46 .
+73 is perhaps prime!
+Testing with 42 .
+73 is perhaps prime!
+Testing with 14 .
+73 is perhaps prime!
+Testing with 34 .
+73 is perhaps prime!
+Testing with 61 .
+73 is perhaps prime!
+Testing with 49 .
+73 is perhaps prime!
+Testing with 8 .
+73 is perhaps prime!
+Testing with 70 .
+73 is perhaps prime!
+Testing with 6 .
+73 is perhaps prime!
+Testing with 63 .
+73 is perhaps prime!
+Testing with 58 .
+73 is perhaps prime!
+Testing with 7 .
+73 is perhaps prime!
+Testing with 23 .
+73 is perhaps prime!
+Testing with 4 .
+73 is perhaps prime!
+Testing with 66 .
+73 is perhaps prime!
+Testing with 36 .
+73 is perhaps prime!
+
+
+Random Binary Number: 1011001 LSB 1
+Random Binary Number: 1010110 LSB 0
+Random Binary Number: 10100 LSB 0
+Random Binary Number: 1100001 LSB 1
+Random Binary Number: 1000010 LSB 0
+Final prime in 32 bit format: 00000000000000000000000001100101
+In integer form: 101
+
+
+Testing with 53 .
+101 is perhaps prime!
+Testing with 51 .
+101 is perhaps prime!
+Testing with 7 .
+101 is perhaps prime!
+Testing with 91 .
+101 is perhaps prime!
+Testing with 44 .
+101 is perhaps prime!
+Testing with 89 .
+101 is perhaps prime!
+Testing with 69 .
+101 is perhaps prime!
+Testing with 32 .
+101 is perhaps prime!
+Testing with 4 .
+101 is perhaps prime!
+Testing with 13 .
+101 is perhaps prime!
+Testing with 19 .
+101 is perhaps prime!
+Testing with 36 .
+101 is perhaps prime!
+Testing with 52 .
+101 is perhaps prime!
+Testing with 5 .
+101 is perhaps prime!
+Testing with 2 .
+101 is perhaps prime!
+Testing with 54 .
+101 is perhaps prime!
+Testing with 55 .
+101 is perhaps prime!
+Testing with 100 .
+101 is perhaps prime!
+Testing with 90 .
+101 is perhaps prime!
+Testing with 11 .
+101 is perhaps prime!
+
+
+0 	 2457 	 7373 	 3 	 2 	 0
+1 	 1 	 3 	 2 	 1 	 0
+2 	 2 	 2 	 1 	 0 	 0
+3 and 7373 are relatively prime. The Multiplicative inverse is: 2458
+
+
+p =  73 q =  101 n =  7373 e =  1 d =  2458
