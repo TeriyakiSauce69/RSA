@@ -63,7 +63,7 @@ def PrimalityTesting(a, x):
             y = (y * x) % a
 
     if y != 1:
-        print(a, "is not prime.")
+        print(a, "is not prime!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     else:
         print(a, "is perhaps prime!")
     #print(y)
@@ -170,11 +170,11 @@ def main():
 
     #Euclid(37,29)
     for e in range(3,2000):
-        x, multplicative_inverse = Euclid(e,n)
+        x, multplicative_inverse = Euclid(e, ((p - 1)*(q - 1)))
         if x == 1:
             print(e, "and", n, "are relatively prime. The Multiplicative inverse is:", multplicative_inverse )
             print("\n")
-            print("p = ", p, "q = ", q, "n = ", n, "e = ", x, "d = ", multplicative_inverse)
+            print("p = ", p, "q = ", q, "n = ", n, "e = ", e, "d = ", multplicative_inverse)
             break
 
 
